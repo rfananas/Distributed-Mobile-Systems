@@ -1,5 +1,5 @@
 from waltisLibrary import *
-import mysql.connector
+
 
 class Konto:
     def __init__(self, id, saldo, limite=0):

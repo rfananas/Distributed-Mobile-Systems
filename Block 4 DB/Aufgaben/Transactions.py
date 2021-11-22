@@ -13,10 +13,8 @@ def showKontoUebersicht(connection, cursor, title="", titleLevel=1):
             abstand = ""
 
         print(unterstreichen(title, uChar), abstand)
-        # zeige Konto Saldos and Bilanzsumme
-        sql_show_saldo_query = """
-        select id_bankkonto, saldo from bankkonto;
-        """
+        # zeige Kontosaldos and Bilanzsumme
+        sql_show_saldo_query = """select id_bankkonto, saldo from bankkonto;"""
         cursor.execute(sql_show_saldo_query) #cursor objektreferenz
         myresult = cursor.fetchall()
         print("+------+--------------+")
